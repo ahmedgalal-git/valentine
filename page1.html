@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        body {
+            background-color: navy;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .hearts {
+            background-image: url('hearts.png'); /* Assume you have a heart images */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+        }
+        .text-area {
+            width: 80%;
+            height: 200px;
+            margin: 20px auto;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>My Valentine Page</h1>
+    <div class="hearts"></div>
+    <textarea class="text-area" placeholder="Write your message here..."></textarea>
+    <br>
+    <button onclick="location.href='page1.html'">Home</button>
+    <button onclick="location.href='page2.html'">Next Page</button>
+</body>
+</html>
