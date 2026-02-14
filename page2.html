@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love - Second Page</title>
+    <style>
+        .gallery { display: flex; overflow: hidden; }
+        .gallery img { width: 100%; }
+        .nav-button { cursor: pointer; padding: 10px; background-color: #ddd; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Love</h1>
+    <video width="600" height="400" autoplay controls>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="gallery">
+        <button class="nav-button" onclick="prevImage()">&#10094;</button>
+        <img id="galleryImage" src="image1.jpg" alt="Gallery Image">
+        <button class="nav-button" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg" ];
+        let currentIndex = 0;
+
+        function showImage(index) {
+            document.getElementById('galleryImage').src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+
+    <a href="page1.html">Previous Page</a>
+    <a href="page3.html">Next Page</a>
+</body>
+</html>
